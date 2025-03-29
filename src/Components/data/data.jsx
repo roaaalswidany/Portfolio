@@ -24,7 +24,7 @@ const projects = [
     repo: "https://github.com/roaaalswidany/project-2.git",
     images: project2,
     title: "Blog",
-    libraries: ["React", "React Router"],
+    framework: ["React", "React Router"],
     languages: ["HTML", "CSS", "JavaScript"],
     description:
       "A simple blog platform developed using React, HTML, CSS, and JavaScript. It allows users to browse all posts, along with a sign-in and sign-up system. The project features a responsive and user-friendly design, providing a seamless experience for reading and interacting with blog posts.",
@@ -65,7 +65,7 @@ const projects = [
     repo: "https://github.com/roaaalswidany/Dashboard.git",
     images: project6,
     title: "Dashboard",
-    libraries: ["React", "React Router"],
+    framework: ["React", "React Router"],
     languages: ["HTML", "CSS", "JavaScript"],
     description:
       "An administrative platform developed with React technologies for a smooth and secure experience. It enables secure login and a secure login/logout system that ensures the privacy of your data.A dynamic dashboard displays products in an organized manner with instant updates. Easily add, edit, or delete new products through an interactive interface. A clean user interface with seamless interactions that adapt to different devices.From login to logout, it transforms administrative tasks into a fun and efficient experience!",

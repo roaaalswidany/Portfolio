@@ -10,7 +10,7 @@ import {
 import projects from "../Components/data/data";
 import "./ProjectDetails.css";
 
-const ProjectDetailsAr = ({ project }) => {
+const ProjectDetails = ({ project }) => {
   const navigate = useNavigate();
   const sliderRef = useRef(null);
   const relatedProjects = projects
@@ -58,8 +58,22 @@ const ProjectDetailsAr = ({ project }) => {
           </div>
 
           <div className="project-description">
-            <h2>{project.title}</h2>
-            <p className="description-text">{project.descriptionAr}</p>
+            <p className="description-text">{project.description}</p>
+            {project.languages && (
+              <div className="project-tags">
+                <span>Basic languages :</span> {project.languages.join(",")}
+              </div>
+            )}
+            {project.framework && (
+              <div className="project-tags">
+                <span>Framework :</span> {project.framework}
+              </div>
+            )}
+            {project.libraries && (
+              <div className="project-tags">
+                <span>Libraries :</span> {project.libraries.join(", ")}
+              </div>
+            )}
           </div>
 
           <a
@@ -104,4 +118,4 @@ const ProjectDetailsAr = ({ project }) => {
   );
 };
 
-export default ProjectDetailsAr;
+export default ProjectDetails;

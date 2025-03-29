@@ -6,7 +6,7 @@ import "./ProjectDetailsPage.css";
 
 const ProjectDetailsPage = () => {
   const { id } = useParams();
-  const project = projects.find((p) => p.id === parseInt(id));
+  const project = projects.find((p) => p.id == parseInt(id));
 
   if (!project) {
     return <div>Project not found</div>;
