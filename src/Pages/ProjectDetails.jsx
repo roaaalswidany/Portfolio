@@ -15,7 +15,7 @@ const ProjectDetails = ({ project }) => {
   const sliderRef = useRef(null);
   const relatedProjects = projects
     .filter((p) => p.id !== project.id)
-    .slice(0, 3);
+    .slice(0, 6);
 
   const navigateToProject = (id) => {
     navigate(`/projects/${id}`);
@@ -29,6 +29,7 @@ const ProjectDetails = ({ project }) => {
         behavior: "smooth",
       });
     }
+    console.log(sliderRef.current);
   };
 
   return (
