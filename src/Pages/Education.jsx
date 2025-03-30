@@ -60,7 +60,7 @@ const EducationCard = ({ title, institution, year, details }) => {
 const Education = () => {
   return (
     <>
-      <section className="education-experience">
+      <section className="education-experience" id="roaa">
         <p className="section-title">Education and Experience</p>
         <h2>Education & Experience</h2>
 

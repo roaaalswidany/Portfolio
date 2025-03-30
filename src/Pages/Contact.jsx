@@ -8,7 +8,7 @@ const Contact = () => {
   const { theme } = useState("");
 
   return (
-    <section id="contact">
+    <section id="contact" className="roaa">
       <div className="container">
         <div className="contact-wrapper">
           <div className="contact-header">

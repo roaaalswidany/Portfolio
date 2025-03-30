@@ -20,15 +20,28 @@
   color: var(--icon-color);
   transition: all 0.3s ease;
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
+  -webkit-transition: ;
+  -moz-transition: ;
+  -ms-transition: ;
+  -o-transition: ;
+  -webkit-filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
 }
 
 @keyframes float {
   0%,
   100% {
     transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
   }
   50% {
     transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
   }
 }
 
@@ -37,6 +50,10 @@
   filter: drop-shadow(0 0 15px var(--icon-color));
   animation-play-state: paused;
   -webkit-filter: drop-shadow(0 0 15px var(--icon-color));
+  -webkit-transform: ;
+  -moz-transform: ;
+  -ms-transform: ;
+  -o-transform: ;
 }
 
 @media (max-width: 992px) {
@@ -46,7 +63,7 @@
   }
 
   .skill_icon {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
 }
 

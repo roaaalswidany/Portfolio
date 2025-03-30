@@ -1,6 +1,7 @@
 #contact {
-  padding: 70px;
+  padding: 70px 20px;
 }
+
 .contact-wrapper {
   padding: 60px 0;
 }
@@ -44,10 +45,6 @@
   gap: 20px;
   padding: 25px;
   border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
 }
 
 .icon-box {
@@ -57,15 +54,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  -webkit-border-radius: ;
-  -moz-border-radius: ;
-  -ms-border-radius: ;
-  -o-border-radius: ;
-}
-
-.icon-box img {
-  width: 50px;
-  height: 50px;
 }
 
 .icon-box img {
@@ -76,18 +64,17 @@
 .info-text p {
   color: #92929d;
   margin-bottom: 5px;
+}
 
-  span {
-    color: #1d2130;
-  }
+.info-text span {
+  color: #1d2130;
 }
 
 .contact-form {
-  margin-top: 10px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 .input-group {
@@ -102,50 +89,60 @@
 input,
 textarea {
   width: 100%;
-  padding: 15px;
+  padding: 14px;
   border: 1px solid #bec0bf;
-  color: #92929d;
+  color: #1d2130;
   border-radius: 8px;
   background: transparent;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: none;
 }
 
 .send-btn {
   margin-top: 15px;
   align-self: flex-start;
-  padding: 15px 40px;
+  padding: 12px 30px;
   background: #0c96e2;
   color: #ffffff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+
+.send-btn:hover {
+  background: #0b7dc2;
 }
 
 @media (max-width: 768px) {
   .contact-content {
     flex-direction: column;
+    gap: 40px;
   }
 
   .contact-header h1 {
     font-size: 32px;
   }
 
-  .info-item {
-    padding: 20px;
+  .input-group {
+    flex-direction: column;
+    gap: 15px;
   }
 
-  input {
-    width: 140px;
+  input,
+  textarea {
+    font-size: 14px;
   }
 
   .send-btn {
-    margin-top: 20px;
+    width: 100%;
+    text-align: center;
   }
 }

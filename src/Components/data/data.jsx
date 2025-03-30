@@ -9,7 +9,7 @@ import project6 from "../../assets/image/project6.jpg";
 const projects = [
   {
     id: 1,
-    link: "https://roaaalswidany.github.io/project-1/",
+    link: " https://roaaalswidany.github.io/project-1/",
     repo: "https://github.com/roaaalswidany/project-1.git",
     images: project1,
     title: "EduPress",
@@ -20,8 +20,8 @@ const projects = [
   },
   {
     id: 2,
-    link: "https://roaaalswidany.github.io/project-2/",
-    repo: "https://github.com/roaaalswidany/project-2.git",
+    link: "#",
+    repo: "https://github.com/roaaalswidany/project-5.git",
     images: project2,
     title: "Blog",
     framework: ["React", "React Router"],
@@ -31,8 +31,8 @@ const projects = [
   },
   {
     id: 3,
-    link: "https://roaaalswidany.github.io/project-3/",
-    repo: "https://github.com/roaaalswidany/project-3.git",
+    link: " https://roaaalswidany.github.io/project-2/",
+    repo: "https://github.com/roaaalswidany/project-2.git",
     images: project3,
     title: "Demo Site",
     languages: ["HTML", "CSS", "JavaScript"],
@@ -41,8 +41,8 @@ const projects = [
   },
   {
     id: 4,
-    link: "https://roaaalswidany.github.io/project-4/",
-    repo: "https://github.com/roaaalswidany/project-4.git",
+    link: "https://roaaalswidany.github.io/project-3/",
+    repo: "https://github.com/roaaalswidany/project-3.git",
     images: project4,
     title: "Cozy",
     languages: ["HTML", "CSS", "JavaScript"],
@@ -51,8 +51,8 @@ const projects = [
   },
   {
     id: 5,
-    link: "#",
-    repo: "https://github.com/roaaalswidany/project-5.git",
+    link: "https://roaaalswidany.github.io/project-4/",
+    repo: "https://github.com/roaaalswidany/project-4.git",
     images: project5,
     title: "Manage Posts",
     languages: ["HTML", "CSS", "JavaScript"],

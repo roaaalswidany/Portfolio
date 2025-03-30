@@ -3,10 +3,11 @@
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  width: calc(100% - 140px);
-  top: 40px;
-  left: 70px;
+  width: 100%;
+  top: 0;
   background-color: var(--navbar-bg);
+  box-shadow: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur (10px);
   color: var(--navbar-text);
   z-index: 1000;
   padding: 10px 20px;
@@ -165,10 +166,10 @@
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+  -webkit-border-radius: ;
+  -moz-border-radius: ;
+  -ms-border-radius: ;
+  -o-border-radius: ;
 }
 
 .sidebar_links li a.active {

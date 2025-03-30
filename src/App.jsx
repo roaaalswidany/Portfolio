@@ -10,6 +10,7 @@ import Contact from "./Pages/Contact";
 import ProjectDetailsPage from "./Pages/ProjectDetailsPage";
 import "./App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import ToTop from "./Components/ToTop/ToTop";
 
 function App() {
   const [theme, setTheme] = React.useState(() => {
@@ -28,6 +29,7 @@ function App() {
     <div className={`app-container ${theme}`}>
       <Navbar toggleTheme={toggleTheme} theme={theme} />
       <main className="content">
+        <ToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutMe" element={<About />} />

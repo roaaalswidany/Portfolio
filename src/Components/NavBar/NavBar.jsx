@@ -26,6 +26,7 @@ const Navbar = ({ toggleTheme, theme }) => {
 
   return (
     <nav
+      id="roaa"
       className="navbar"
       style={{
         "--navbar-bg": theme == "light" ? "#ffffff" : "#000000",
@@ -52,6 +53,10 @@ const Navbar = ({ toggleTheme, theme }) => {
       <button
         className="navbar_menu-btn"
         onClick={() => setIsSidebarOpen(true)}
+        style={{
+          backgroundColor: theme == "light" ? "#ffffff" : "#1a1a1a",
+          color: theme == "light" ? "#000" : "#fff",
+        }}
       >
         <FontAwesomeIcon icon={faBars} />
       </button>
