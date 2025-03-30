@@ -25,7 +25,13 @@ const Navbar = ({ toggleTheme, theme }) => {
   const closeSidebar = () => setIsSidebarOpen(false);
 
   return (
-    <nav className="navbar">
+    <nav
+      className="navbar"
+      style={{
+        "--navbar-bg": theme == "light" ? "#ffffff" : "#000000",
+        "--navbar-text": theme == "light" ? "#000000" : "#ffffff",
+      }}
+    >
       <Link to="/" className="navbar_logo">
         Roaa
       </Link>

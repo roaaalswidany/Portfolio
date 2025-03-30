@@ -6,7 +6,8 @@
   width: calc(100% - 140px);
   top: 40px;
   left: 70px;
-  background-color: #ffffff;
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text);
   z-index: 1000;
   padding: 10px 20px;
   border-radius: 2px;
@@ -25,7 +26,7 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 24px;
-  color: #000000;
+  color: var(--navbar-text);
 }
 
 .navbar_links {
@@ -38,7 +39,7 @@
   transition: 200ms;
   text-decoration: none;
   font-weight: 600;
-  color: #000000;
+  color: var(--navbar-text);
   padding: 5px 10px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -61,7 +62,7 @@
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: #000000;
+  color: var(--navbar-text);
   margin-right: 15px;
   transition: color 0.3s ease;
   -webkit-transition: color 0.3s ease;
@@ -103,7 +104,8 @@
   width: 300px;
   max-width: 80%;
   height: 100vh;
-  background-color: var(--bg-color);
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text);
   display: flex;
   flex-direction: column;
   padding: 30px;
