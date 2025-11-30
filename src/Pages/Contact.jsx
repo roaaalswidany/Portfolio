@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
+import emailjs from '@emailjs/browser';
 import phoneIcon from "../assets/image/phone.svg";
 import emailIcon from "../assets/image/email.svg";
 import locationIcon from "../assets/image/address.svg";
@@ -27,25 +28,23 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const formDataToSend = new FormData();
-      formDataToSend.append('name', formData.name);
-      formDataToSend.append('email', formData.email);
-      formDataToSend.append('phone', formData.phone);
-      formDataToSend.append('message', formData.message);
-      
-      const response = await fetch("https://formspree.io/f/xqkrwjye", {
-        method: "POST",
-        body: formDataToSend,
-      });
+      await emailjs.send(
+        'service_4vbjklq',      
+        'template_cbafh9r',   
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message
+        },
+        'Zk5wxb3_YgbU9hKEc'       
+      );
 
-      if (response.ok) {
-        alert("Message sent successfully! I'll contact you soon.");
-        setFormData({ name: '', email: '', phone: '', message: '' });
-      } else {
-        alert("Error sending message. Please try again.");
-      }
+      alert("Message sent successfully! I'll contact you soon.");
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      
     } catch (error) {
-      alert("Network error. Please check your connection.");
+      alert("Error sending message. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
