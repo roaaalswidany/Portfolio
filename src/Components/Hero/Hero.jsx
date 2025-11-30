@@ -22,7 +22,7 @@ const Hero = () => {
               Where technical precision meets creative personal touch.
             </p>
 
-            <a href="/cv.pdf" download className="hero-cta">
+            <a href="/src/assets/cv.pdf" download className="hero-cta">
               Download CV
             </a>
           </div>
