@@ -1,8 +1,8 @@
 .skills_grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 400px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 500px;
 }
 
 .skill_item {
@@ -12,19 +12,75 @@
   align-items: center;
   position: relative;
   animation: float 3s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
   -webkit-animation: float 3s ease-in-out infinite;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
 .skill_icon {
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   color: var(--icon-color);
   transition: all 0.3s ease;
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
-  -webkit-transition: ;
-  -moz-transition: ;
-  -ms-transition: ;
-  -o-transition: ;
-  -webkit-filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* تأثيرات Hover محسنة */
+.skill_item:hover {
+  transform: translateY(-8px) scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--icon-color);
+  box-shadow: 
+    0 15px 30px rgba(0, 0, 0, 0.3),
+    0 0 0 2px var(--icon-color);
+  animation-play-state: paused;
+  -webkit-transform: translateY(-8px) scale(1.05);
+  -moz-transform: translateY(-8px) scale(1.05);
+  -ms-transform: translateY(-8px) scale(1.05);
+  -o-transform: translateY(-8px) scale(1.05);
+}
+
+.skill_item:hover .skill_icon {
+  transform: scale(1.25) rotate(5deg);
+  filter: 
+    drop-shadow(0 0 25px var(--icon-color))
+    brightness(1.2);
+  -webkit-transform: scale(1.25) rotate(5deg);
+  -moz-transform: scale(1.25) rotate(5deg);
+  -ms-transform: scale(1.25) rotate(5deg);
+  -o-transform: scale(1.25) rotate(5deg);
+  -webkit-filter: 
+    drop-shadow(0 0 25px var(--icon-color))
+    brightness(1.2);
+}
+
+/* تأثير الطفو مع تأخيرات متبادلة */
+.skill_item:nth-child(4n+1) {
+  animation-delay: 0s;
+}
+.skill_item:nth-child(4n+2) {
+  animation-delay: 0.5s;
+}
+.skill_item:nth-child(4n+3) {
+  animation-delay: 1s;
+}
+.skill_item:nth-child(4n+4) {
+  animation-delay: 1.5s;
 }
 
 @keyframes float {
@@ -37,29 +93,66 @@
     -o-transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
-    -webkit-transform: translateY(-10px);
-    -moz-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
-    -o-transform: translateY(-10px);
+    transform: translateY(-12px);
+    -webkit-transform: translateY(-12px);
+    -moz-transform: translateY(-12px);
+    -ms-transform: translateY(-12px);
+    -o-transform: translateY(-12px);
   }
 }
 
-.skill_icon:hover {
-  transform: scale(1.2);
-  filter: drop-shadow(0 0 15px var(--icon-color));
-  animation-play-state: paused;
-  -webkit-filter: drop-shadow(0 0 15px var(--icon-color));
-  -webkit-transform: ;
-  -moz-transform: ;
-  -ms-transform: ;
-  -o-transform: ;
+/* تأثير دخول عند التحميل */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
+.skill_item {
+  animation: 
+    fadeInUp 0.6s ease-out forwards,
+    float 3s ease-in-out infinite 0.6s;
+  opacity: 0;
+}
+
+.skill_item:nth-child(1) { animation-delay: 0.1s, 0.7s; }
+.skill_item:nth-child(2) { animation-delay: 0.2s, 0.8s; }
+.skill_item:nth-child(3) { animation-delay: 0.3s, 0.9s; }
+.skill_item:nth-child(4) { animation-delay: 0.4s, 1.0s; }
+.skill_item:nth-child(5) { animation-delay: 0.5s, 1.1s; }
+.skill_item:nth-child(6) { animation-delay: 0.6s, 1.2s; }
+
+/* تحسينات التجاوب */
+@media (max-width: 1200px) {
+  .skills_grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 450px;
+  }
+  
+  .skill_icon {
+    font-size: 2.5rem;
+  }
 }
 
 @media (max-width: 992px) {
   .skills_grid {
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    max-width: 100%;
+    max-width: 400px;
   }
 
   .skill_icon {
@@ -69,11 +162,65 @@
 
 @media (max-width: 768px) {
   .skills_grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    max-width: 350px;
+  }
+
+  .skill_icon {
+    font-size: 2.5rem;
+  }
+  
+  .skill_item:hover {
+    transform: translateY(-5px) scale(1.03);
+    -webkit-transform: translateY(-5px) scale(1.03);
+    -moz-transform: translateY(-5px) scale(1.03);
+    -ms-transform: translateY(-5px) scale(1.03);
+    -o-transform: translateY(-5px) scale(1.03);
+  }
+}
+
+@media (max-width: 576px) {
+  .skills_grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 300px;
+  }
+
+  .skill_icon {
+    font-size: 2rem;
+  }
+  
+  .skill_item {
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 250px;
   }
 
   .skill_icon {
     font-size: 2.2rem;
   }
+}
+
+/* تحسين الأداء */
+.skills_grid {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+}
+
+.skill_item {
+  will-change: transform, box-shadow;
 }

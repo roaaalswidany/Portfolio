@@ -15,12 +15,11 @@ const Hero = () => {
               <p>
                 HEY! <span>I’m Roaa,</span>
               </p>
-              <span>Frontend Developer</span>
+              <span>Full-Stack Developer</span>
             </h1>
 
             <p className="hero-subtext">
-              Agency-quality Webflow websites with the personal touch of a
-              freelancer.
+              Where technical precision meets creative personal touch.
             </p>
 
             <a href="/cv.pdf" download className="hero-cta">

@@ -115,7 +115,6 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #212529;
 }
 
 .project-tech {
@@ -168,10 +167,6 @@
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  -webkit-border-radius: ;
-  -moz-border-radius: ;
-  -ms-border-radius: ;
-  -o-border-radius: ;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;

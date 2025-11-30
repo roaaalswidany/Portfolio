@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import phoneIcon from "../assets/image/phone.svg";
 import emailIcon from "../assets/image/email.svg";
@@ -5,7 +6,50 @@ import locationIcon from "../assets/image/address.svg";
 import "./Contact.css";
 
 const Contact = () => {
-  const { theme } = useState("");
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('message', formData.message);
+      
+      const response = await fetch("https://formspree.io/f/xqkrwjye", {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully! I'll contact you soon.");
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        alert("Error sending message. Please try again.");
+      }
+    } catch (error) {
+      alert("Network error. Please check your connection.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="contact" className="roaa">
@@ -14,7 +58,7 @@ const Contact = () => {
           <div className="contact-header">
             <h5>Contact</h5>
             <h1>
-              Let’s Discuss Your <span>Project</span>
+              Let's Discuss Your <span>Project</span>
             </h1>
           </div>
 
@@ -51,14 +95,47 @@ const Contact = () => {
               </div>
             </div>
 
-            <form className="contact-form">
+            <form className="contact-form" onSubmit={handleSubmit}>
               <div className="input-group">
-                <input type="text" placeholder="Full name" />
-                <input type="email" placeholder="Your email" />
+                <input 
+                  type="text" 
+                  name="name"
+                  placeholder="Full name" 
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+                <input 
+                  type="email" 
+                  name="email"
+                  placeholder="Your email" 
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
               </div>
-              <input type="tel" placeholder="Phone number" />
-              <textarea placeholder="Message" rows="5"></textarea>
-              <button className="send-btn">Send Message</button>
+              <input 
+                type="tel" 
+                name="phone"
+                placeholder="Phone number" 
+                value={formData.phone}
+                onChange={handleChange}
+              />
+              <textarea 
+                name="message"
+                placeholder="Message" 
+                rows="5"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
+              <button 
+                type="submit" 
+                className="send-btn"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </button>
             </form>
           </div>
         </div>

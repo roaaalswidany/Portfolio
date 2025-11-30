@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from "react";
 import project1 from "../../assets/image/project1.jpg";
 import project2 from "../../assets/image/project2.jpg";
@@ -5,8 +6,30 @@ import project3 from "../../assets/image/project3.jpg";
 import project4 from "../../assets/image/project4.jpg";
 import project5 from "../../assets/image/project5.jpg";
 import project6 from "../../assets/image/project6.jpg";
+import project7 from "../../assets/image/project7.jpg"
+import project8 from "../../assets/image/project8.jpg"
 
 const projects = [
+      {
+    id: 7,
+    link: "https://dashboard-typescript-2w6f.vercel.app/",
+    repo: "https://github.com/roaaalswidany/dashboard-typescript.git",
+    images: project7,
+    title: "Dashboard with typeScript",
+    framework: ["React", "React Router"],
+    languages: [ "tailwind","TypeScript"],
+    description: "E-Commerce Dashboard - React + TypeScript + firebase admin panel with full CRUD operations, authentication, dark mode, and real-time notifications and chat. Built with Vite and Axios.",
+  },
+  {
+    id: 8,
+    link: "https://edu-press-next-js.vercel.app/",
+    repo: "https://github.com/roaaalswidany/EduPress-next.js.git",
+    images: project8,
+    title: "EdPress",
+    framework: ["Next"],
+    languages: ["TypeScript", "tailwind"],
+    description:"EduPlatform - A Next.js educational platform with centralized Redux state management. Features user authentication, dynamic course catalog, and smart pagination.",
+  },
   {
     id: 1,
     link: " https://roaaalswidany.github.io/project-1/",
@@ -69,6 +92,16 @@ const projects = [
     languages: ["HTML", "CSS", "JavaScript"],
     description:
       "An administrative platform developed with React technologies for a smooth and secure experience. It enables secure login and a secure login/logout system that ensures the privacy of your data.A dynamic dashboard displays products in an organized manner with instant updates. Easily add, edit, or delete new products through an interactive interface. A clean user interface with seamless interactions that adapt to different devices.From login to logout, it transforms administrative tasks into a fun and efficient experience!",
+  },
+    {
+    id: 9,
+    link: "https://social-media-brown-omega.vercel.app/",
+    repo: "https://github.com/roaaalswidany/social-media.git",
+    images: "not found image",
+    title: "Social_Media",
+    framework: ["Next"],
+    languages: [ "prisma", "postgresql"],
+    description: "Social Media API - Next.js backend with JWT authentication, post management, follow system, likes, and image upload. Built with Prisma, TypeScript, and Route Handlers.",
   },
 ];
 

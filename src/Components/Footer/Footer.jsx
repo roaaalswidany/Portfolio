@@ -19,7 +19,7 @@ const Footer = () => {
             <a
               aria-label="Roaa's LinkedIn"
               className="footer_social_link linkedin"
-              href="https://www.linkedin.com/in/roaa-alswidany-a6174533b"
+              href="https://www.linkedin.com/in/%D8%B1%D8%A4%D9%89-%D8%A7%D9%84%D8%B3%D9%88%D9%8A%D8%AF%D8%A7%D9%86%D9%8A-a6174533b"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -37,7 +37,7 @@ const Footer = () => {
             <a
               aria-label="Roaa's Instagram"
               className="footer_social_link instagram"
-              href="https://www.instagram.com/rmys_026"
+              href="https://www.instagram.com/16ra24?igsh=MXh4c2trbmQxODdsbQ=="
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -46,7 +46,7 @@ const Footer = () => {
             <a
               aria-label="Roaa's Facebook"
               className="footer_social_link facebook"
-              href="https://www.facebook.com/share/1AACWNe8HH/"
+              href="https://www.facebook.com/roaa.alswidany?mibextid=ZbWKwL"
               target="_blank"
               rel="noopener noreferrer"
             >

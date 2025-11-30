@@ -6,6 +6,7 @@ import {
   FaArrowLeft,
   FaArrowRight,
   FaExternalLinkAlt,
+  FaEye,
 } from "react-icons/fa";
 import projects from "../Components/data/data";
 import "./ProjectDetails.css";
@@ -23,13 +24,12 @@ const ProjectDetails = ({ project }) => {
 
   const scrollSlider = (direction) => {
     if (sliderRef.current) {
-      const scrollAmount = direction == "right" ? 300 : -300;
+      const scrollAmount = direction === "right" ? 300 : -300;
       sliderRef.current.scrollBy({
         left: scrollAmount,
         behavior: "smooth",
       });
     }
-    console.log(sliderRef.current);
   };
 
   return (
@@ -77,21 +77,34 @@ const ProjectDetails = ({ project }) => {
             )}
           </div>
 
-          <a
-            href={project.repo}
-            className="github-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub />
-            Github Repo
-          </a>
+          {/* الأزرار - زرين بجانب بعض */}
+          <div className="project-buttons">
+            <a
+              href={project.repo}
+              className="github-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub />
+              Github Repo
+            </a>
+            <a
+              href={project.link} // استخدام الـ link من البيانات
+              className="demo-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaEye />
+              Live Demo
+            </a>
+          </div>
         </div>
       </div>
+
       <div className="related-projects">
         <div className="section-header">
           <div className="titles-wrapper">
-            <p>Protfolio</p>
+            <p>Portfolio</p>
             <h2 className="section-title">The Best</h2>
             <span className="section-subtitle">Projects</span>
           </div>

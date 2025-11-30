@@ -21,13 +21,6 @@
   width: 100%;
 }
 
-.footer_text {
-  color: #1d2130;
-}
-
-p {
-  color: #1d2130;
-}
 
 .footer_social {
   display: flex;
@@ -45,12 +38,6 @@ p {
   color: #0c96e2;
 }
 
-@media (prefers-color-scheme: dark) {
-  .footer_text,
-  .footer_content p {
-    color: rgba(10, 10, 10, 0.9) !important;
-  }
-}
 
 @media (max-width: 768px) {
   .footer_content {

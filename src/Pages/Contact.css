@@ -19,7 +19,6 @@
 .contact-header h1 {
   font-size: 40px;
   margin-top: 15px;
-  color: #1d2130;
 }
 
 .contact-header h1 span {
@@ -62,13 +61,10 @@
 }
 
 .info-text p {
-  color: #92929d;
+  color: gray;
   margin-bottom: 5px;
 }
 
-.info-text span {
-  color: #1d2130;
-}
 
 .contact-form {
   flex: 1;
@@ -91,7 +87,6 @@ textarea {
   width: 100%;
   padding: 14px;
   border: 1px solid #bec0bf;
-  color: #1d2130;
   border-radius: 8px;
   background: transparent;
   font-size: 16px;
