@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import emailjs from '@emailjs/browser';
 import phoneIcon from "../assets/image/phone.svg";

@@ -7,7 +7,7 @@ import {
   faBars,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
-import "./Navbar.css";
+import "./NavBar.css";
 
 const Navbar = ({ toggleTheme, theme }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
