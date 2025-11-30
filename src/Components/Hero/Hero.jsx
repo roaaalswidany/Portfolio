@@ -1,5 +1,6 @@
 import React from "react";
 import profile from "../../assets/image/profile.jpg";
+import cv from "../../assets/cv.pdf"
 import "./Hero.css";
 
 const Hero = () => {
@@ -22,7 +23,7 @@ const Hero = () => {
               Where technical precision meets creative personal touch.
             </p>
 
-            <a href="/src/assets/cv.pdf" download className="hero-cta">
+            <a href={cv} download className="hero-cta">
               Download CV
             </a>
           </div>
