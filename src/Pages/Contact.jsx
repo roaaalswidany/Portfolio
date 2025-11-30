@@ -29,8 +29,8 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        'service_4vbjklq',      
-        'template_cbafh9r',   
+        'service_rvuh36h',      
+        'template_q2ldr2a',   
         {
           name: formData.name,
           email: formData.email,
@@ -44,6 +44,7 @@ const Contact = () => {
       setFormData({ name: '', email: '', phone: '', message: '' });
       
     } catch (error) {
+      console.log(error)
       alert("Error sending message. Please try again.");
     } finally {
       setIsSubmitting(false);
