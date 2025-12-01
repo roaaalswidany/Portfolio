@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaExpandArrowsAlt, FaExternalLinkAlt } from "react-icons/fa"; // تغيير الأيقونة
+import { FaExpandArrowsAlt, FaExternalLinkAlt } from "react-icons/fa";
 import projects from "../data/data";
 import "./Cards.css";
 
@@ -9,11 +9,29 @@ const Cards = () => {
 
   const openFullscreen = (image) => {
     setFullscreenImage(image);
+    document.body.style.overflow = 'hidden'; // يمنع scroll
   };
 
   const closeFullscreen = () => {
     setFullscreenImage(null);
+    document.body.style.overflow = 'auto'; // يرجع scroll
   };
+
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') {
+        closeFullscreen();
+      }
+    };
+
+    if (fullscreenImage) {
+      document.addEventListener('keydown', handleEsc);
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEsc);
+    };
+  }, [fullscreenImage]);
 
   return (
     <div className="portfolio-container" id="roaa">
@@ -40,7 +58,7 @@ const Cards = () => {
               <h3 className="project-name">{project.title}</h3>
               <p className="project-tech">
                 {project.languages.join(" - ")}
-                {project.libraries && `- ${project.libraries.join(" - ")}`}
+                {project.libraries &&  `- ${project.libraries.join(" - ")}`}
               </p>
             </div>
             <Link to={`/projects/${project.id}`} className="details-link">
@@ -51,12 +69,15 @@ const Cards = () => {
       ))}
 
       {fullscreenImage && (
-        <div className="fullscreen-overlay" onClick={closeFullscreen}>
+        <div className="fullscreen-overlay">
+          <button className="close-fullscreen-btn" onClick={closeFullscreen}>
+            ✕
+          </button>
           <img
             src={fullscreenImage}
             className="fullscreen-image"
             alt="Fullscreen"
-            onClick={(e) => e.stopPropagation()}
+            onClick={closeFullscreen} // الصورة نفسها تغلق
           />
         </div>
       )}
